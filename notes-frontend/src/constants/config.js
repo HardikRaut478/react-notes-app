@@ -1,1 +1,1 @@
-export const BASE_URL = "https://proud-gloves.cyclic.app/"
+export const BASE_URL = "http://13.201.30.185/api";
