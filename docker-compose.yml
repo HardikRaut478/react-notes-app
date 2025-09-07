@@ -10,12 +10,11 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=example
     volumes:
       - mongo_data:/data/db
-     # ports:
-      #   - "27017:27017"   # Optional: only if you want to connect from host
     networks:
       - appnet
 
   backend:
+    image: hardik478/notes-backend:latest
     build: ./notes-backend
     container_name: myapp_backend
     restart: unless-stopped
@@ -37,6 +36,7 @@ services:
       start_period: 10s
 
   frontend:
+    image: hardik478/notes-frontend:latest
     build: ./notes-frontend
     container_name: myapp_frontend
     restart: unless-stopped
@@ -67,4 +67,3 @@ networks:
 
 volumes:
   mongo_data:
-
