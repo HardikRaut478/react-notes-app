@@ -62,7 +62,7 @@ pipeline {
                         """
                     } else if (params.ACTION == 'down') {
                         sh """
-                            docker compose -f docker-compose.yml down
+                            docker compose -f docker-compose.yml down -v
                         """
                     }
                 }
