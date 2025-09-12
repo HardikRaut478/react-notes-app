@@ -1,1 +1,1 @@
-export const BASE_URL = "http://hardik.pankajdhapade.online/api";
+export const BASE_URL = "13.232.143.175";
